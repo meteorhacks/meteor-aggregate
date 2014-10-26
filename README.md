@@ -1,4 +1,4 @@
-[![](https://api.travis-ci.org/meteorhacks/meteor-aggregations.svg)](https://travis-ci.org/meteorhacks/meteor-aggregations)
+[![](https://api.travis-ci.org/meteorhacks/meteor-aggregate.svg)](https://travis-ci.org/meteorhacks/meteor-aggregate)
 
 # meteorhacks:aggregate
 
