@@ -1,28 +1,31 @@
 [![](https://api.travis-ci.org/meteorhacks/meteor-aggregations.svg)](https://travis-ci.org/meteorhacks/meteor-aggregations)
 
-# meteorhacks:aggregations
+# meteorhacks:aggregate
 
-A simple package to add proper aggregation support for Meteor. No hacks, but the way how it should be.
+A simple package to add proper aggregation support for Meteor. This package expose `.aggregate` method on `Mongo.Collection` instances.
 
-> Only works on server side
+> this only works on server side and there is no oberserving support or reactivity built in
 
 ## Usage
 
+Add to your app with
 ```
-meteor add meteorhacks:aggregations
+meteor add meteorhacks:aggregate
 ```
 
-Then Simple use `.aggregate` function like below.
+Then simply use `.aggregate` function like below.
 
 ```js
-var result = coll.aggregate([
+var metrics = new Mongo.Collection('metrics');
+var pipeline = [
   {$group: {_id: null, resTime: {$sum: "$resTime"}}}
-]);
+];
+var result = metrics.aggregate(pipeline);
 ```
 
 ## Why?
 
-There are few other aggregation packages out there. But all of them are hacks (okay, I like hacks).
-But they don't work with if someone pass a custom driver when creating the `Mongo.Collection`.
+There are few other aggregation packages out there. All of them written with some complex hacks and there are some easy way to do things.
+They also don't work with custom Mongo drivers as well.
 
-And this package is short and simple.
+And this package is short and simple. (~20 LOC)
