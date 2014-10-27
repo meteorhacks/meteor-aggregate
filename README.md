@@ -1,8 +1,8 @@
-[![](https://api.travis-ci.org/meteorhacks/meteor-aggregations.svg)](https://travis-ci.org/meteorhacks/meteor-aggregations)
+[![](https://api.travis-ci.org/meteorhacks/meteor-aggregate.svg)](https://travis-ci.org/meteorhacks/meteor-aggregate)
 
 # meteorhacks:aggregate
 
-A simple package to add proper aggregation support for Meteor. This package expose `.aggregate` method on `Mongo.Collection` instances.
+A simple package to add proper aggregation support for Meteor. This package exposes `.aggregate` method on `Mongo.Collection` instances.
 
 > this only works on server side and there is no oberserving support or reactivity built in
 
