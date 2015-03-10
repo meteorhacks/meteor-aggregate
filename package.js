@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Proper MongoDB aggregations support for Meteor",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "git": "https://github.com/meteorhacks/meteor-aggregate.git",
   "name": "meteorhacks:aggregate"
 });
@@ -22,7 +22,7 @@ Package.onTest(function(api) {
 });
 
 function configurePackage(api) {
-  api.versionsFrom('METEOR@0.9.1');
+  api.versionsFrom('METEOR@1.0');
   api.use(['mongo-livedata', 'meteorhacks:collection-utils@1.2.0'], ['server']);
 
   // common before
