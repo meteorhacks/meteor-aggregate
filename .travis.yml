@@ -5,3 +5,4 @@ before_install:
   - "curl -L http://git.io/ejPSng | /bin/sh"
 env:
   - TEST_COMMAND=meteor
+  - TEST_COMMAND=mrt METEOR_RELEASE=1.0.3
