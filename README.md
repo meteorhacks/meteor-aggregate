@@ -23,6 +23,18 @@ var pipeline = [
 var result = metrics.aggregate(pipeline);
 ```
 
+### Using Options
+
+~~~js
+var result = new Mongo.Collection('metrics');
+var metrics = new Mongo.Collection('metrics');
+var pipeline = [
+  {$group: {_id: null, resTime: {$sum: "$resTime"}}}
+];
+var result = metrics.aggregate(pipeline, {explain: true});
+console.log("Explain Report:", JSON.stringify(result[0]), null, 2);
+~~~
+
 ## Why?
 
 There are few other aggregation packages out there. All of them written with some complex hacks and there are some easy way to do things.
