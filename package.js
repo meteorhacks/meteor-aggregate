@@ -1,6 +1,6 @@
 Package.describe({
   "summary": "Proper MongoDB aggregations support for Meteor",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "git": "https://github.com/meteorhacks/meteor-aggregate.git",
   "name": "meteorhacks:aggregate"
 });
