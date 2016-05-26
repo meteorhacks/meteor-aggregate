@@ -26,7 +26,6 @@ var result = metrics.aggregate(pipeline);
 ### Using Options
 
 ~~~js
-var result = new Mongo.Collection('metrics');
 var metrics = new Mongo.Collection('metrics');
 var pipeline = [
   {$group: {_id: null, resTime: {$sum: "$resTime"}}}
