@@ -20,5 +20,5 @@ Mongo.Collection.prototype.aggregateAsync = function() {
 	// < Meteor 1.0.4
     collection = this._getCollection();
   }
-  return collection.aggregate.call(collection, arguments);
+  return collection.aggregate.call(collection, Array.prototype.slice.call(arguments));
 }
